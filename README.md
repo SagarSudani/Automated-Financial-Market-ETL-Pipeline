@@ -1,4 +1,6 @@
 # Automated-Financial-Market-ETL-Pipeline
+<img width="726" height="399" alt="Stock Analysis dashboard" src="https://github.com/user-attachments/assets/6fe9bff4-7f6b-4a84-b0ab-c222a3a44871" />
+
 ## 📖 Project Overview
 This project is an end-to-end data pipeline and visualization solution designed to track and analyze the performance of major automotive stocks (Volkswagen, BMW, Mercedes-Benz, Tesla).
 
