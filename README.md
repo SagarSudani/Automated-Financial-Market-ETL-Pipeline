@@ -7,17 +7,7 @@ The system automates the extraction of raw financial data, transforms it into me
 Steps
 Clone the Repo:
 
-Bash
-
 git clone [https://github.com/yourusername/stock-market-etl.git](https://github.com/yourusername/stock-market-etl.git)
-Setup Database: Create a schema named financial_db in your MySQL instance.
-
-Run ETL Script:
-
-Bash
-
-pip install yfinance pandas sqlalchemy mysql-connector-python
-jupyter notebook "Automated Financial Market ETL Pipeline.ipynb"
 
 ### 🎯 Key Objectives
 * **Automate Data Collection:** Remove the need for manual CSV downloads using Python scripts.
