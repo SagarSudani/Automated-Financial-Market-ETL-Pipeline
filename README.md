@@ -4,10 +4,6 @@ This project is an end-to-end data pipeline and visualization solution designed 
 
 The system automates the extraction of raw financial data, transforms it into meaningful technical indicators (Moving Averages, Volatility, Daily Returns), stores it in a relational database, and visualizes it in an interactive Power BI dashboard for trend analysis.
 
-Steps
-Clone the Repo:
-
-git clone [https://github.com/yourusername/stock-market-etl.git](https://github.com/yourusername/stock-market-etl.git)
 
 ### 🎯 Key Objectives
 * **Automate Data Collection:** Remove the need for manual CSV downloads using Python scripts.
@@ -15,12 +11,16 @@ git clone [https://github.com/yourusername/stock-market-etl.git](https://github.
 * **Dynamic Reporting:** Create a "Trader-Style" dashboard with conditional formatting (Red/Green indicators) and interactive time-travel sorting.
 
 ## 🏗️ Architecture & Pipeline
-
-The project follows a classic **ETL (Extract, Transform, Load)** architecture:
-A[Yahoo Finance API] -- Extract --> B(Python Script)
-B -- Transform (Pandas) --> C{Clean & Calculate Metrics}
-C -- Load --> D[(MySQL Database)]
-D -- Connect --> E[Power BI Dashboard]
+**1.Extract**: Python script uses **yfinance** to fetch daily stock data (Open, High, Low, Close, Volume).
+pip install yfinance, pandas, sqlalchemy, mysql-connector-python
+**jupyter notebook** "Automated Financial Market ETL Pipeline.ipynb"
+**2.Transform**: Pandas is used to:
+     Clean missing data and handle weekend gaps.
+     Calculate Daily Returns %.
+     Compute 50-Day Moving Averages (Trend Indicator).
+     Compute 30-Day Volatility (Risk Metric).
+**3.Load**: Data is pushed into a MySQL database (financial_db) using SQLAlchemy.
+**4. Visualize**: Power BI connects directly to MySQL to render the dashboard.
 
 📈 **Future Improvements**
 Automated Scheduling: Use Apache Airflow to run the Python script daily.
